@@ -1,0 +1,162 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input,
+figure,
+figcaption {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+  cursor: pointer;
+}
+
+header,
+footer,
+nav,
+section,
+aside,
+article,
+main,
+figure,
+figcaption {
+  display: block;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.w {
+  width: 1200px;
+  margin: auto;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+.re {
+  position: relative;
+}
+
+.ab {
+  position: absolute;
+}
+
+input {
+  outline: none;
+}
+
+.f60 {
+  color: #f60;
+}
+
+#top {
+  height: 108px;
+  background: url("../resource/imgs/register_top_bg.png");
+}
+
+.register_box {
+  height: 491px;
+  background: #f9f9f9;
+}
+
+.register_box .warper {
+  width: 960px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register_box .warper_b {
+  width: 960px;
+  height: 218px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.register_box .warper_b .step0 {
+  margin: 20px auto;
+  background: url("../resource/imgs/register_banner_bg.png") no-repeat center;
+  width: 655px;
+  height: 30px;
+  background-position: 0 0;
+}
+
+.register_box .warper_b .register_con_box1 {
+  height: 32px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.register_box .warper_b .register_con_box1 #user-validation.ok {
+  color: green;
+}
+
+.register_box .warper_b .register_con_box1 #user-validation.ok::after {
+  content: "√";
+}
+
+.register_box .warper_b .register_con_box1 #user-validation.ng {
+  color: red;
+}
+
+.register_box .warper_b .register_con_box1 #user-validation.ng::after {
+  content: "×";
+}
+
+.register_box .warper_b .register_con_box1 .reg_txt_0 {
+  height: 30px;
+  width: 255px;
+  line-height: 30px;
+  border: 1px solid #cfcfcf;
+  text-indent: 5px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.footer {
+  height: 204px;
+  background: url("../resource/imgs/register_footer_bg.png");
+}

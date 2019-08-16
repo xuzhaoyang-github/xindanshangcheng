@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/cart.css">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="cookie">
+        <a href="javascript:;">退出登录</a>
+    </div>
+    <div class="shopping_table" style="border:1px solid #bfbfbf">
+        <table>
+            <thead>
+                <tr>
+                    <td width="60"><label><input type="checkbox">全选</label></td>
+                    <td width="375">商品名称</td>
+                    <td width="70">商品价格</td>
+                    <td width="96">商品图片</td>
+                    <td width="80">数量</td>
+                    <td width="85">小计</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label><input type="checkbox"></label></td>
+                    <td>鼠标</td>
+                    <td class="price">￥188</td>
+                    <td><img src="../resource/imgs/cart_img_1.jpg" alt=""></td>
+                    <td>
+                        <button class="minus">-</button>
+                        <span class="count">1</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="sum">￥188</td>
+                    <td><button class="remove">删除</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="../lib/jquery-3.4.1.min.js"></script>
+    <script src="../script/cart/cart.js"></script>
+    <script>
+        $.get('../api/cart.php', function (resp) {
+            var trs = resp.map(function (product) {
+                var trs = resp.map(function (product) {
+                    return `
+                    <tr>
+                    <td><label><input type="checkbox"></label></td>
+                    <td>${product.name}</td>
+                    <td class="price">￥${product.price}</td>
+                    <td><img src="${product.img}" alt=""></td>
+                    <td>
+                        <button class="minus">-</button>
+                        <span class="count">${product.count}</span>
+                        <button class="add">+</button>
+                    </td>
+                    <td class="sum">￥${product.price * product.count}</td>
+                    <td><button class="remove">删除</button></td>
+                </tr>
+                    `
+                })
+                $('tbody').html(trs.join(''))
+            })
+        })
+    </script>
+    <script>
+        function getCookie(name) {
+            var cookie = document.cookie;
+            var array = cookie.split('; ');
+            var key_value;
+            for (var i = 0; i < array.length; i++) {
+                key_value = array[i].split('='); 
+                if (key_value[0] === name) {
+                    return key_value[1]
+                }
+            }
+            return null;
+        }
+        function setCookie(name, value, path, days) {
+            var cookie = `${name}=${value}`;
+            if (path) {
+                cookie += `;path=${path}`
+            }
+            if (days) {
+                var d = new Date();
+                d.setDate(d.getDate() + days);
+                cookie += `;expires=${d}`
+            }
+            document.cookie = cookie;
+        }
+        function removeCookie(name, path) {
+            setCookie(name, '', path, -1);
+        }
+        $('a').click(function () {
+            removeCookie('userid', '/')
+            location.href = './login.html'
+        })
+    </script>
+</body>
+
+</html>

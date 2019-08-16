@@ -1,0 +1,223 @@
+@charset "UTF-8";
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+ol,
+dl,
+dt,
+dd,
+input,
+figure,
+figcaption {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-size: 14px;
+  font-family: "微软雅黑";
+  color: #666;
+}
+
+a {
+  text-decoration: none;
+  color: #999;
+  cursor: pointer;
+}
+
+header,
+footer,
+nav,
+section,
+aside,
+article,
+main,
+figure,
+figcaption {
+  display: block;
+}
+
+.clear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.w {
+  width: 1200px;
+  margin: auto;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+.re {
+  position: relative;
+}
+
+.ab {
+  position: absolute;
+}
+
+input {
+  outline: none;
+}
+
+.f60 {
+  color: #f60;
+}
+
+#top {
+  height: 108px;
+  background: url("../resource/imgs/login_bg1.png");
+}
+
+#body {
+  width: 930px;
+  margin: auto;
+  height: 397px;
+  padding: 44px 0;
+  background: #e3e3e3;
+}
+
+#body a {
+  display: inline-block;
+}
+
+#body .login_right {
+  width: 360px;
+  height: 355px;
+  padding: 20px 0;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+#body .login_right .login_right_c1 {
+  width: 305px;
+  height: 215px;
+  padding: 0 25px 15px 30px;
+}
+
+#body .login_right .login_right_c1 .login_title {
+  width: 305px;
+  height: 21px;
+  margin-bottom: 23px;
+}
+
+#body .login_right .login_right_c1 .login_title h2 {
+  display: inline-block;
+  color: #333;
+  font-size: 18px;
+}
+
+#body .login_right .login_right_c1 .login_title a {
+  color: #039;
+}
+
+#body .login_right .login_right_c1 .login_form li {
+  width: 305px;
+  height: 57px;
+  padding-bottom: 10px;
+}
+
+#body .login_right .login_right_c1 .login_form li span {
+  width: 30px;
+  height: 33px;
+  display: inline-block;
+}
+
+#body .login_right .login_right_c1 .login_form li input {
+  width: 250px;
+  height: 31px;
+  vertical-align: top;
+}
+
+#body .login_right .login_right_c1 .login_form .username span {
+  background: url("../resource/icons/login_sprite4.png") no-repeat 0 0;
+}
+
+#body .login_right .login_right_c1 .login_form .password span {
+  background: url("../resource/icons/login_sprite4.png") no-repeat bottom center;
+}
+
+#body .login_right .login_right_c1 .yincang {
+  visibility: hidden;
+}
+
+#body .login_right .login_right_c1 .login_oper {
+  width: 305px;
+  height: 42px;
+  background: #f60;
+  text-align: center;
+}
+
+#body .login_right .login_right_c2 {
+  width: 305px;
+  height: 109px;
+  background: white;
+  padding: 16px 25px 0 30px;
+}
+
+#body .login_right .login_right_c2 a {
+  height: 30px;
+  padding-left: 33px;
+  display: inline-block;
+}
+
+#body .login_right .login_right_c2 a:nth-of-type(1) {
+  background: url("../resource/icons/login_sprite1.png") no-repeat;
+}
+
+#body .login_right .login_right_c2 a:nth-of-type(2) {
+  background: url("../resource/icons/login_sprite1.png") no-repeat 0 -45px;
+}
+
+#body .login_right .login_right_c2 a:nth-of-type(3) {
+  background: url("../resource/icons/login_sprite1.png") no-repeat 0 -97px;
+}
+
+#body .login_right .login_right_c2 a:nth-of-type(4) {
+  background: url("../resource/icons/login_sprite1.png") no-repeat 0 -161px;
+}
+
+#body .login_right .login_right_c2 .next_a:nth-of-type(1) {
+  background: url("../resource/icons/login_sprite2.gif") no-repeat no-repeat scroll 10px -2578px;
+}
+
+#body .login_right .login_right_c2 .next_a:nth-of-type(2) {
+  background: url("../resource/icons/login_sprite2.gif") no-repeat no-repeat scroll 10px -2613px;
+}
+
+#body .login_right .login_right_c2 .next_a:nth-of-type(3) {
+  background: url("../resource/icons/login_sprite2.gif") no-repeat no-repeat scroll 10px -2514px;
+}
+
+#body .login_right .login_right_c2 .last_a {
+  cursor: pointer;
+  padding-left: 16px;
+  background: url("../resource/icons/login_sprite3.gif") no-repeat 0 3px;
+}
